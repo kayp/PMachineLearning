@@ -114,7 +114,7 @@ The entire training set file was loaded in R and reviewed visually. A quick visu
 ##   [list output truncated]
 ## NULL
 ```
-Dimensions of traning data provided
+Dimensions of training data provided
 
 ```r
 dim (pml1)
@@ -160,7 +160,7 @@ The data was split in a 3:1 ratio of training set and testing set (cross validat
 
 __Model Performance__  
 
-The model generated was used to predict "classe" values of the testing set. A 3-D plot of the predicted values versus actual values has been plotted below. As is evident, there are less than 20 mismatches (incorrect predictions) in over 4000 rows of predictions.
+The model generated was used to predict "classe" values of the testing set. A 3-D plot of the predicted values versus actual values has been plotted below. As is evident, there are less than 20 mismatches (incorrect predictions) in over 4000 rows of predictions. The howllow circles represent the mismatches (incorrect ptdictions).
 
 ![plot of chunk unnamed-chunk-6](figure/unnamed-chunk-6.png) 
 
@@ -168,26 +168,26 @@ __Prediction Errors in Cross Validation__
 The in sample error, i.e. the error in prediction of the training set was 
 
 ```
-## [1] 0.15
+## [1] 0.16
 ```
 
 ```
-## In Sample Error is    0.15 %
+## In Sample Error is    0.16 %
 ```
 
 The out of sample error, i.e. the error in the prediction of the test set for cross validation is
 
 ```
-## [1] 0.41
+## [1] 0.37
 ```
 
 ```
-## Out of Sample Error is  0.41 %
+## Out of Sample Error is  0.37 %
 ```
 
 __Conclusions__
 
-The succesful prediction model was identified using the caret package in R. A boosting method with trees (gbm) was eventually identified as most accurate after a series of trying few different models. All complete numeric columns were used for the prediction, except column "X" which served to represent row numbers. The accuracy for this model was over 99% and it succesfully predicted all 20 data points provided in the project submission section.
+The succesful prediction model was identified using the caret package in R. A boosting method with trees (gbm) was eventually identified as most accurate after a series of trying few different models. All complete numeric columns were used for the prediction, except column "X" which served to represent row numbers. The accuracy for this model was over 99% (out of sample error 0.41%) and it succesfully predicted all 20 data points provided in the project submission section.
 
 
 
